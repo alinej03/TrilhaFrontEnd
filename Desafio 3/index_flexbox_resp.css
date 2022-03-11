@@ -1,0 +1,38 @@
+.flex-container {
+    display: flex; 
+    width: 100%; 
+    height: 50px;
+    align-items: center; 
+    border: 1px solid black;
+}
+
+.logo {
+    margin-left: 15px;
+}
+
+.menu {
+    margin-left: auto;
+    display: flex;
+}
+
+.menu-hamburguer {
+    margin-left: auto;
+    display: flex;
+}
+
+.menu-padrao {
+    margin-right: 25px;
+}
+
+.hamburguer {
+    margin-right: 15px
+}
+
+.menu-responsivo {
+    border: 1px solid black;
+    width: fit-content;
+    display: none;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin: 2% 0 0 auto;
+}

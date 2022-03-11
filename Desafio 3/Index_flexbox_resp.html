@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Desafio Index Flexbox</title>
+        <link rel="stylesheet" href="index_flexbox_resp.css">
+    </head>
+
+    <body>
+        <div class="flex-container">
+
+            <div class="logo" id="logo">
+                <a href="https://www.udemy.com/course/curso-web/#overview">Your logo</a>
+            </div>
+
+            <div class="menu" id="menu">
+                <p class="menu-padrao"> Menu 1 </p>
+                <p class="menu-padrao"> Menu 2 </p>
+                <p class="menu-padrao"> Menu 3 </p>
+                <p class="menu-padrao"> Menu 4 </p>
+            </div>
+
+            <div class="menu-hamburguer" id="menu-hamburguer">
+                <img src="./menu.png" class="hamburguer" onmouseover="abrirMenu()" />
+            </div>
+
+        </div>
+
+        <div class="menu-responsivo" id="menu-responsivo">
+            <p> Menu 1 </p>
+            <p> Menu 2 </p>
+            <p> Menu 3 </p>
+            <p> Menu 4 </p>
+        </div>
+
+        <script>
+
+            if(window.screen.width > 600) {
+                //Exibir o menu
+                document.getElementById("menu-hamburguer").style.display = "none";
+                document.getElementById("menu").style.display = "flex";
+            } else {
+                //Exibir o hamburguer
+                document.getElementById("menu-hamburguer").style.display = "flex";
+                document.getElementById("menu").style.display = "none";
+            }
+
+            function abrirMenu() {
+                document.getElementById("menu-responsivo").style.display = "flex";
+            }
+
+        </script>
+    </body>
+</html>

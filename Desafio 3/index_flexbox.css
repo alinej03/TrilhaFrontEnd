@@ -1,0 +1,23 @@
+
+.flex-container {
+    display: flex; 
+    width: 100%; 
+    align-items: center; 
+    border: 1px solid black;
+}
+
+.logo {
+    margin-left: 15px;
+}
+
+.menu {
+    margin-left: auto;
+    display: flex;
+}
+
+p {
+    margin-right: 25px;
+}
+
+
+
