@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>PROTOTIPO</title>
+ 
+    <link rel="stylesheet" href="prototipo.css">
+
+    <script>
+        function abrirMenu() {
+            if(document.getElementById("menu-responsivo").style.display == "none" || document.getElementById("menu-responsivo").style.display == "") {
+                document.getElementById("menu-responsivo").style.display = "flex";
+            } else {
+                document.getElementById("menu-responsivo").style.display = "none";
+            }
+        }    
+    </script>
+
+</head>
+
+
+<body>
+
+   <header>
+       <div class="container">
+            <div class="logo">
+                <h1 class="logo">YOURLOGO</h1>
+            </div>
+
+            <div class="menu">
+                <p>Home</p>
+                <p>Profile</p>
+                <p>About</p>
+                <p>Contact</p>
+                <p>Sing In</p>
+            </div>
+
+            <div class="menu-hamburguer" id="menu-hamburguer" onclick="abrirMenu()">
+                <img src="./menu.png" class="hamburguer" />
+            </div>
+        </div>
+
+        <div class="menu-responsivo" id="menu-responsivo">
+            <p>Home</p>
+            <p>Profile</p>
+            <p>About</p>
+            <p>Contact</p>
+            <p>Sing In</p>
+        </div>
+   </header>
+
+    <div class="principal">
+
+        <div class="imagem_principal">
+            <img src="Imagem_principal.png" class="imagem_prin">
+        </div>
+
+        <div class="container_contato">
+            <h1 class="contato">CONTACT US</h1>
+            <p class="descricao"> Lorem ipsium dolor sit amet, consectetuer adiplicing elit, set diam monummy nibh eusimod tincidunt ut laoreet dolore magma aliquan erat volutpat. Us wisi enim ad minim veniam quis</p>
+
+            <div class="borda"></div>
+
+            <form>
+                <label for="Your Name"></label>
+                <input type="text" id="nome" class="input-padrao" required placeholder=" &copy Your Name">
+
+                <label for="Your Subject"></label>
+                <input type="email" id="email" class="email" required placeholder=" ✉ Your Subject">
+
+                <label for="message" for="Your Message"></label>
+                <textarea cols="20" rows="10" class="message" required placeholder="Message"></textarea>
+            </form>
+
+            <div class="button">
+                <button class="start">START CHAT</button>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <footer>
+        <img src="designer.png" class="imagem">
+    </footer>
+
+</body>
+
+</html>
+
