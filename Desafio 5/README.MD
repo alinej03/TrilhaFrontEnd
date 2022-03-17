@@ -83,3 +83,8 @@ FormBuilder
 Um serviço injetável que fornece métodos de fábrica para criar instâncias de controle.
 
 V)
+VI)Para usar formulários reativos no Angular é preciso importar o pacote ReactiveFormsModule em seu arquivo app.module.ts.
+
+VII)através do //localhost.
+
+VIII)Autenticar uma aplicação significa proteger nossas rotas, impedindo assim, que qualquer pessoa acesse o painel do nosso sistema sem credenciais. 
