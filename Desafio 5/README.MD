@@ -26,7 +26,7 @@ D)ANGULAR
 - V) O arquivo angular.json contém as configurações globais da aplicação, também define o arquivo que vai iniciar a aplicação, fazendo o SPA.
 - VI)
 - VII) O package.json é um arquivo de configuração utilizado para estipular e configurar dependências de um projeto (quais outros pacotes ele vai precisar para ser executado) e scripts automatizados. Através dele conseguimos deixar claro uma "receita" para executar um projeto.
-VIII)Define qual dos ambientes definidos em /src/environments deve ser usado na geração do build.
+- VIII)Define qual dos ambientes definidos em /src/environments deve ser usado na geração do build.
 
 E)Text Interpolation
 - I) A interpolação de texto permite incorporar valores de string dinâmicos em seus modelos HTML, dentro de uma aréa delimitada por {{..}}
@@ -61,28 +61,31 @@ H) Reactive forms:
 Para usar o Template-Driven Forms é necessário importar o módulo FormsModule
 No caso dos Reactive Forms a lógica fica, geralmente, no componente e as suas validações são feitas programaticamente com TypeScript.
 - II)Os formulários reativos fornecem acesso síncrono ao modelo de dados, imutabilidade com operadores observáveis ​​e rastreamento de alterações por meio de fluxos observáveis.
+
 - III)Há três etapas para usar controles de formulário:
 
 1 - Registre o módulo de formulários reativos em seu aplicativo. Este módulo declara as diretivas de formulário reativo que você precisa para usar formulários reativos.
 2 -Gere uma nova FormControlinstância e salve-a no componente.
 3 -Registre o FormControlno modelo.
 
-IV)AbstractControl	
+IV)
+- AbstractControl	
 A classe base abstrata para as classes de controle de formulário concreto FormControl, FormGroupe FormArray. Ele fornece seus comportamentos e propriedades comuns.
 
-FormControl	
+- FormControl	
 Gerencia o valor e o status de validade de um controle de formulário individual. Corresponde a um controle de formulário HTML como imput ou select.
 
-FormGroup	
+- FormGroup	
 Gerencia o valor e o estado de validade de um grupo de AbstractControlinstâncias. As propriedades do grupo incluem seus controles filho. O formulário de nível superior em seu componente é FormGroup.
 
-FormArray	
+- FormArray	
 Gerencia o valor e o estado de validade de uma matriz de AbstractControlinstâncias indexada numericamente.
 
-FormBuilder	
+- FormBuilder	
 Um serviço injetável que fornece métodos de fábrica para criar instâncias de controle.
 
-V)
+V)Criando apenas uma pasta em sua classe, sem a nescessidade de um pacote completo.
+
 VI)Para usar formulários reativos no Angular é preciso importar o pacote ReactiveFormsModule em seu arquivo app.module.ts.
 
 VII)através do //localhost.
