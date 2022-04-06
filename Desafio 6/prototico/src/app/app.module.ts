@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { FormComponent } from './form/form.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
-    FormComponent
+    FormComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

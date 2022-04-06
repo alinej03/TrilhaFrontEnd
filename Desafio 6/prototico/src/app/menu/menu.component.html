@@ -1,0 +1,28 @@
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1 class="logo">YOURLOGO</h1>
+        </div>
+
+        <ul class="menu">
+            <li><a href="*">Home</a></li>
+            <li><a href="*">Profile</a></li>
+            <li><a href="*">About</a></li>
+            <li><a href="*">Contact</a></li>
+            <li><a href="*">Sing In</a></li>
+        </ul>
+
+        <div class="menu-hamburguer" id="menu-hamburguer" (click)="abrirMenu()">
+            <img src="assets/menu.png" class="hamburguer" />
+        </div>
+    </div>
+
+    <ul class="menu-responsivo" id="menu-responsivo" *ngIf="exibirMenuResponsivo">
+        <li><a href="*">Home</a></li>
+        <li><a href="*">Profile</a></li>
+        <li><a href="*">About</a></li>
+        <li><a href="*">Contact</a></li>
+        <li><a href="*">Sing In</a></li>
+    </ul>
+    
+</header>
