@@ -1,0 +1,58 @@
+<div class="tudo">
+
+    <div class="conteudo">
+        
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h1 class="logo">YOURLOGO</h1>
+                </div>
+    
+                <ul class="menu">
+                    <li><a href="*">Home</a></li>
+                    <li><a href="*">Profile</a></li>
+                    <li><a href="*">About</a></li>
+                    <li><a href="*">Contact</a></li>
+                    <li><a href="*">Sing In</a></li>
+                </ul>
+    
+                <div class="menu-hamburguer" id="menu-hamburguer" (click)="abrirMenu()">
+                    <img src="assets/menu.png" class="hamburguer" />
+                </div>
+            </div>
+    
+            <ul class="menu-responsivo" id="menu-responsivo" *ngIf="exibirMenuResponsivo">
+                <li><a href="*">Home</a></li>
+                <li><a href="*">Profile</a></li>
+                <li><a href="*">About</a></li>
+                <li><a href="*">Contact</a></li>
+                <li><a href="*">Sing In</a></li>
+            </ul>
+            
+        </header>
+
+        <div class="principal">
+    
+            <div class="imagem_principal">
+                <img src="assets/Imagem_principal.png" class="imagem_prin" >
+            </div>
+    
+            <div class="container_contato">
+                <h2 class="contato">CONTACT US</h2>
+                <p class="descricao"> Lorem ipsium dolor sit amet, consectetuer adiplicing elit, set diam monummy nibh eusimod tincidunt ut laoreet dolore magma aliquan erat volutpat. Us wisi enim ad minim veniam quis</p>
+    
+                <div class="borda"></div>
+    
+                <app-form></app-form>
+            </div>
+    
+        </div>
+        
+    
+        <footer>
+            <img src="assets/designer.png" class="imagem">
+        </footer>
+    
+    </div>
+
+</div>

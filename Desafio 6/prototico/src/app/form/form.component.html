@@ -1,0 +1,18 @@
+<div class="container-sucesso" *ngIf="exibirMensagemSucesso">
+    <p class="sucesso">Mensagem enviada com sucesso.</p>
+</div>
+
+<form [formGroup]="formulario">
+    <label class="cor" *ngIf="formulario.controls['nome'].errors">*Campo obrigatório</label>
+    <br><input type="text" id="nome" class="input-padrao"  formControlName="nome">
+
+    <br><label class="cor" *ngIf="formulario.controls['email'].errors">*Campo obrigatório</label>
+    <br><input type="email" id="email" class="email"  formControlName="email">
+
+    <br><label class="cor" *ngIf="formulario.controls['message'].errors">*Campo obrigatório</label>
+    <br><textarea cols="20" rows="10" class="message"  formControlName="message"></textarea>
+
+    <div class="button">
+        <button class="start" [disabled]="!formulario.valid" [ngClass]="{'start_disabled' : !formulario.valid}" (click)="post()">START CHAT</button>
+    </div>
+</form>

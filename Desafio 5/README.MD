@@ -64,11 +64,11 @@ No caso dos Reactive Forms a lógica fica, geralmente, no componente e as suas v
 
 - III)Há três etapas para usar controles de formulário:
 
-1 - Registre o módulo de formulários reativos em seu aplicativo. Este módulo declara as diretivas de formulário reativo que você precisa para usar formulários reativos.
-2 -Gere uma nova FormControlinstância e salve-a no componente.
-3 -Registre o FormControlno modelo.
+- 1 Registre o módulo de formulários reativos em seu aplicativo. Este módulo declara as diretivas de formulário reativo que você precisa para usar formulários reativos.
+- 2 -Gere uma nova FormControlinstância e salve-a no componente.
+- 3 -Registre o FormControlno modelo.
 
-IV)
+IV)As classes são:
 - AbstractControl	
 A classe base abstrata para as classes de controle de formulário concreto FormControl, FormGroupe FormArray. Ele fornece seus comportamentos e propriedades comuns.
 
