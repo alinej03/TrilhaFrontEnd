@@ -1,0 +1,181 @@
+.cor {
+    font-size: 10px; 
+    color: red;
+}
+
+.button {
+    display: flex; width: 100%; padding-bottom: 10px;
+}
+
+
+/* Celular */
+@media only screen and (max-width: 900px) {
+
+    form {
+        margin: auto;
+        padding-top: 3%;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .input-padrao {
+        width: 65%;
+        height: 25px;
+    }
+
+    .email {
+        width: 65%;
+        height: 25px;
+    }
+
+    .message {
+        width: 65%;
+        height: 100px;
+    }
+
+    .start {
+        margin: 15px auto;
+        border-radius: 100px;
+        background-image: linear-gradient(to bottom left, #770977, #E2137D);
+        color: white;
+        font-weight: bold;
+        height: 35px;
+    }
+
+    
+    .start_disabled {
+        margin: 15px auto;
+        border-radius: 100px;
+        background: grey;
+        color: white;
+        font-weight: bold;
+        height: 35px;
+    }
+
+    
+    .contato {
+        color: #993399;
+        font-size: 52px;
+        text-align: center;
+        margin: auto 0;
+    }
+
+    .descricao {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        font-size: 12px;
+        margin: 0 auto;
+        width: 70%;
+        margin-top: 15px;
+    }
+
+    .borda {
+        border-bottom: 1px solid grey; 
+        width: 70%; 
+        margin: 20px auto;
+    }
+
+    .container-sucesso {
+        display: flex; 
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .sucesso {
+        background-color: lawngreen;
+        border-radius: 10px;
+        height: 25px;
+        width: 70%;
+        text-align: center;
+        padding-top: 1%;
+    }
+
+}
+
+/* Computador */
+@media only screen and (min-width: 901px) {
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin-left: auto;
+    }
+
+    .input-padrao {
+        width: 40%;
+        height: 25px;
+    }
+
+    .email {
+        width: 40%;
+        height: 25px;
+        margin-bottom: 10px;
+    }
+
+    .message {
+        width: 40%;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .start {
+        // margin: 15px 10% 15px auto;
+        margin: 10px auto 20px;
+        border-radius: 100px;
+        background-image: linear-gradient(to bottom left, #770977, #E2137D);
+        color: white;
+        font-weight: bold;
+        height: 35px;
+    }
+
+    .start_disabled {
+        margin: 10px auto 20px;
+        // margin: 15px 10% 15px auto;
+        border-radius: 100px;
+        background: grey;
+        color: white;
+        font-weight: bold;
+        height: 35px;
+    }
+
+    .contato {
+        color: #993399;
+        font-size: 70px;
+        text-align: right;
+        margin: auto 0;
+    }
+
+    .descricao {
+        text-align: right;
+        font-size: 12px;
+        margin: 25px 0 10px 40%;
+    }
+
+    
+    .borda {
+        border-bottom: 1px solid grey; 
+        width: 70%; 
+        margin: 3% 0 40px auto;
+    }
+
+    .container-sucesso {
+        display: flex; 
+        justify-content: end;
+        margin-bottom: 10px;
+    }
+    
+    .sucesso {
+        background-color: lawngreen;
+        border-radius: 10px;
+        height: 25px;
+        width: 50%;
+        text-align: center;
+        padding-top: 1%;
+    }
+
+}
+
+

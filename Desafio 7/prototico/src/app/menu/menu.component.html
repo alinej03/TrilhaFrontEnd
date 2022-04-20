@@ -1,0 +1,29 @@
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1 class="logo">YOURLOGO</h1>
+        </div>
+
+        <ul class="menu">
+            <li><button mat-button>Home</button></li>
+            <li><button mat-button><a href="*">Profile</a></button></li>
+            <li><button mat-button><a href="*">About</a></button></li>
+            <li><button mat-button><a href="*">Contact</a></button></li>
+            <li><button mat-button><a href="*">Sing In</a></button></li>
+        </ul>
+
+        <div class="menu-hamburguer" id="menu-hamburguer" [matMenuTriggerFor]="menu">
+            <img src="assets/menu.png" class="hamburguer" />
+        </div>
+
+        <mat-menu #menu="matMenu">
+            <div class="menu_responsivo">
+                <button mat-button><a href="*">Home</a></button>
+                <button mat-button><a href="*">Profile</a></button>
+                <button mat-button><a href="*">About</a></button>
+                <button mat-button><a href="*">Contact</a></button>
+                <button mat-button><a href="*">Sing In</a></button>
+            </div>
+        </mat-menu>
+    </div>
+</header>

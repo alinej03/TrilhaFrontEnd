@@ -1,0 +1,35 @@
+<div class="contact">
+    <h2 class="contato">CONTACT US</h2>
+    <p class="descricao">Lorem ipsium dolor sit amet, consectetuer adiplicing elit, set diam monummy nibh eusimod tincidunt ut laoreet dolore magma aliquan erat volutpat. Us wisi enim ad minim veniam quis</p>    
+</div>
+
+<div class="borda"></div>
+
+<div class="container-sucesso" *ngIf="exibirMensagemSucesso">
+    <p class="sucesso">Mensagem enviada com sucesso.</p>
+</div>
+
+<form [formGroup]="formulario">
+
+    <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Aline" formControlName="nome" required>
+        <mat-error *ngIf="formulario.controls['nome'].invalid">{{getErrorMessageName()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" required>
+        <mat-error *ngIf="formulario.controls['email'].invalid">{{getErrorMessageEmail()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Mensagem</mat-label>
+        <textarea matInput formControlName="message" required></textarea>
+        <mat-error *ngIf="formulario.controls['message'].invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <div class="button">
+        <button mat-stroked-button class="start" [disabled]="!formulario.valid" [ngClass]="{'start_disabled' : !formulario.valid}" (click)="post()">START CHAT</button>
+    </div>
+</form>
