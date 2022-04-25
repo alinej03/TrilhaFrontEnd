@@ -1,6 +1,7 @@
 import { Category } from "../../categories/shared/category.model";
 
 export class Entry {
+  category: unknown;
   constructor(
     public id?: number,
     public user_id?: string,

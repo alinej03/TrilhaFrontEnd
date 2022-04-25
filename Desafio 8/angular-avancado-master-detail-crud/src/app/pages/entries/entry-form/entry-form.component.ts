@@ -116,12 +116,12 @@ export class EntryFormComponent implements OnInit, AfterContentChecked{
     if (this.currentAction == "edit") {
       
       this.route.paramMap.pipe(
-        switchMap(params => this.entryService.getById(+params.get("id")))
+        switchMap(params => this.entryService.getById(params.get("id")))
       )
       .subscribe(
         (entry) => {
           this.entry = entry;
-          this.entryForm.patchValue(entry) // binds loaded entry data to EntryForm
+          this.entryForm.patchValue(entry) 
         },
         (error) => alert('Ocorreu um erro no servidor, tente mais tarde.')
       )

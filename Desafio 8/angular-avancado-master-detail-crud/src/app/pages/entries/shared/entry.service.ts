@@ -25,7 +25,7 @@ export class EntryService {
     return this.http.get(`${this.apiPath}?user_id=${this.user}`).pipe(catchError(this.handleError));
   }
 
-  getById(id: number): Observable<Entry> {
+  getById(id: string): Observable<Entry> {
     const url = `${this.apiPath}/${id}?user_id=${this.user}`;
 
     return this.http.get(url).pipe(

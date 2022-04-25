@@ -14,6 +14,7 @@ import toastr from "toastr";
   templateUrl: './category-form.component.html',
   styleUrls: ['./category-form.component.css']
 })
+
 export class CategoryFormComponent implements OnInit, AfterContentChecked{
   
   currentAction: string;
@@ -33,6 +34,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked{
   ngOnInit() {
     this.setCurrentAction();
     this.buildCategoryForm();
+    this.loadCategory();
   }
 
   ngAfterContentChecked(){
@@ -65,6 +67,25 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked{
       description: [null]
     });
   }
+
+
+  private loadCategory() {
+    if (this.currentAction == "edit") {
+      this.route.paramMap.pipe(
+        switchMap(params => this.categoryService.getById(params.get("id")))
+      )
+      .subscribe(
+        (category) => {
+        this.category = category;  
+        this.categoryForm.patchValue(this.category)
+      },
+      (error) => alert('ocorreu um erro no servidor, Tente mais tarde.')
+      )
+    }
+  }
+
+
+
 
   private setPageTitle() {
     if (this.currentAction == 'new')
