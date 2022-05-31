@@ -1,0 +1,51 @@
+<main class="principal">
+
+<h2 class="titulo">Dados do imovel</h2>
+
+<form [formGroup]="formularioImovel"> 
+  <div class="card" >
+    <div class="card-body">
+      <div class="form-row">
+        
+        <div class="form-group col-md-4">
+          
+          <select class="form-control" [ngClass]="{'is-invalid': formularioImovel.controls['seletor'].invalid && formularioImovel.controls['seletor'].touched}" type="text"  placeholder="Tipo do imovel" formControlName="seletor">
+            <option selected disable value="">Tipo do imovel</option>
+            <option>Residencial</option>
+            <option>Comercial</option>
+          </select>
+          <label class="description" [ngClass]="{'error-description': formularioImovel.controls['seletor'].invalid && formularioImovel.controls['seletor'].touched}">Preencher com o tipo de imovél</label>
+
+        </div>
+
+        <div class="form-group col-md-4">
+          <input class="form-control" [ngClass]="{'is-invalid': formularioImovel.controls['rendaMensal'].invalid && formularioImovel.controls['rendaMensal'].touched}" type="text"  placeholder="Renda mensal" formControlName="rendaMensal">
+          <label class="description" [ngClass]="{'error-description': formularioImovel.controls['rendaMensal'].invalid && formularioImovel.controls['rendaMensal'].touched}">Preencha com a sua renda mensal</label>
+        </div>
+
+        <div class="form-group col-md-4">
+          <input class="form-control" [ngClass]="{'is-invalid': formularioImovel.controls['valorImovel'].invalid && formularioImovel.controls['valorImovel'].touched}"  type="text" placeholder="Valor do imovel" formControlName="valorImovel">
+          <label class="description" [ngClass]="{'error-description': formularioImovel.controls['valorImovel'].invalid && formularioImovel.controls['valorImovel'].touched}">Preencha com o valor do imóvel desejado</label>
+        </div>
+
+        <div class="form-group col-md-4">
+          <input class="form-control"  (keyup)="calculoEntrada($event.target)" [ngClass]="{'is-invalid': entrada == false || (formularioImovel.controls['valorEntrada'].invalid && formularioImovel.controls['valorEntrada'].touched)}" type="text" placeholder="Valor da entrada"  formControlName="valorEntrada">
+          <label class="description"  [ngClass]="{'error-description': formularioImovel.controls['valorEntrada'].invalid && formularioImovel.controls['valorEntrada'].touched}">Preencha com o minimo 20% do valor do imovél </label>
+        </div>
+
+        <div class="form-group col-md-4">
+          <input class="form-control" [ngClass]="{'is-invalid': formularioImovel.controls['parcelas'].invalid && formularioImovel.controls['parcelas'].touched}" type="number" min="1" max="360" placeholder="Em quantas parcelas deseja parcelar?"  formControlName="parcelas">
+          <label class="description" [ngClass]="{'error-description': formularioImovel.controls['parcelas'].invalid && formularioImovel.controls['parcelas'].touched}">Preencha com o máximo 360 parcelas</label>
+        </div>
+      
+      </div>
+      
+      <div>
+        <button (click)="calculoFinanciamento()" type="submit"  class="btn btn-outline-primary btn-lg float-right mt-3" [disabled]="!formularioImovel.valid" >simular</button>
+        <button type="submit" class="btn btn-outline-primary btn-lg float-left mt-3" routerLink="/informacoes" id="voltar" (click)="salvarDados()">voltar</button>
+      </div>
+    </div>  
+  </div>  
+</form>
+
+</main>

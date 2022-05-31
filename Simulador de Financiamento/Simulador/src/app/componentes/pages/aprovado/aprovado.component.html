@@ -1,0 +1,25 @@
+
+<main class="principal"  >
+
+    <h2 class="titulo">Aprovado</h2>
+
+    <div class="card" >
+        <span class="proposta">Proposta Nº 01</span>
+        <img class="imagem" src="assets/approved.png" >
+        <span class="aprovado">STATUS: APROVADO</span>
+       
+     <nav>
+        <ul class="lista">
+            <li class="item">Taxa de 8% ao ano para correntistas;</li>
+            <li class="item">Taxa de 10% ao ano para não correntistas;</li>
+            <li class="item">Parcela inicial R$ {{dados.parcelaInicial}}</li>
+            <li class="item">Valor total aprovado: R$ {{dados.valorTotalAprovado}}</li>
+            <li class="item">Seguro Só Vamu Security;</li>
+            <li class="item">Desconto na primeira e na última parcela.</li>
+        </ul>
+     </nav> 
+     
+     <a class="btn btn-primary" id="tela" [routerLink]="['']" title="IR PARA TELA INICIAL" (click)="limparDados()">IR PARA TELA INICIAL</a>
+
+    </div>
+</main>

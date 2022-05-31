@@ -1,0 +1,105 @@
+@media (max-width: 600px) {
+    .principal{
+        background:  #E5E5E5; 
+        padding-left: 16px; 
+        padding-right: 16px; 
+        height: 215vh
+    }
+}
+
+@media (min-width: 601px) {
+    .principal{
+        background:  #E5E5E5; 
+        padding-left: 16px; 
+        padding-right: 16px; 
+        height: 125vh
+    }
+}
+
+
+.titulo{
+    font-size: 24px; 
+    font-weight: 500; 
+    padding-top: 16px; 
+    margin-bottom: 16px
+}
+
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 2px var(--gray);
+    border-radius: 4px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    line-height: 10px;
+}
+
+.proposta {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: var(--black);
+    margin: 10px;
+}
+
+.imagem {
+    margin-top: 60px;
+}
+
+.reprovado {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: #AE0000;
+    margin-top: 32px;
+    padding: 0 20% 2% 20%;
+    border-bottom: 1px solid var(--gray);
+}
+
+p {
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: #000000;
+    margin-top: 28px;
+    // margin: 10px;
+}
+
+.lista-reprovado {
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: #000000;
+    margin-top: 77px;
+   
+    // margin: 10px;
+}
+
+#tela{
+    text-transform: uppercase;
+    font-size: 14px;
+    background: #6200EE;
+    margin-top: 72px;
+   
+   
+}

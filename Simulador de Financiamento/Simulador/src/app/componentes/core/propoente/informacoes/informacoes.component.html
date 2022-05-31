@@ -1,0 +1,57 @@
+<main class="principal">
+
+  <h2 class="titulo">Dados do proponente</h2>
+
+  <form [formGroup]="formulario">
+    <div class="card">
+      <div class="card-body">
+        <div class="form-row">
+
+          <div class="form-group col-md-4" >
+            <input class="form-control" [ngClass]="{'is-invalid': formulario.controls['nomeCompleto'].invalid && formulario.controls['nomeCompleto'].touched}" type="text" placeholder="Nome completo" formControlName="nomeCompleto">
+            <label class="description"  [ngClass]="{'error-description': formulario.controls['nomeCompleto'].invalid && formulario.controls['nomeCompleto'].touched}" >Preencha com seu nome completo</label>
+          </div>
+
+          <div class="form-group col-md-4">
+            <input class="form-control" [ngClass]="{'is-invalid': formulario.controls['profissao'].invalid && formulario.controls['profissao'].touched}" type="text" matInput placeholder="Profissão" formControlName="profissao">
+            <label class="description" [ngClass]="{'error-description': formulario.controls['profissao'].invalid && formulario.controls['profissao'].touched}">Preencha com a sua profissão</label>
+          </div>
+
+          <div class="form-group col-md-4">
+            <input class="form-control" mask="000.000.000-00" [ngClass]="{'is-invalid': formulario.controls['cpf'].invalid && formulario.controls['cpf'].touched}" type="text" placeholder="CPF" formControlName="cpf">
+            <label class="description" [ngClass]="{'error-description': formulario.controls['cpf'].invalid && formulario.controls['cpf'].touched}">Preencha com o seu cpf</label>
+          </div>
+
+          <div class="form-group col-md-4">
+            <input class="form-control" [ngClass]="{'is-invalid': formulario.controls['email'].invalid && formulario.controls['email'].touched}" type="text" placeholder="E-mail" formControlName="email">
+            <label class="description" [ngClass]="{'error-description': formulario.controls['email'].invalid && formulario.controls['email'].touched}">Preencha com um email válido</label>
+          </div>
+
+          <div class="form-group col-md-4">
+            <input class="form-control" (keyup)="validacaoData($event.target)" mask="00/00/0000" type="text" placeholder="Data de nascimento" formControlName="dataNascimento" [ngClass]="{'is-invalid': maiorIdade == false || (formulario.controls['dataNascimento'].invalid && formulario.controls['dataNascimento'].touched)}">
+            <label class="description" [ngClass]="{'error-description': maiorIdade == false || (formulario.controls['dataNascimento'].invalid && formulario.controls['dataNascimento'].touched)}">Preencha com sua data de nascimento</label>
+          </div>
+
+          <div class="form-group col-md-4">
+            <input mask="00000-000" class="form-control" type="text" placeholder="CEP" formControlName="cep" [ngClass]="{'is-invalid': formulario.controls['cep'].invalid && formulario.controls['cep'].touched}">
+            <label class="description" [ngClass]="{'error-description': formulario.controls['cep'].invalid && formulario.controls['cep'].touched}">O CEP deve ter 8 dígitos</label>
+          </div>
+
+          <div class="form-group col-md-4">
+            <input mask="(00) 00000-0000"class="form-control" type="text" placeholder="Celular" formControlName="celular" [ngClass]="{'is-invalid': formulario.controls['celular'].invalid && formulario.controls['celular'].touched}">
+            <label class="description" [ngClass]="{'error-description': formulario.controls['celular'].invalid && formulario.controls['celular'].touched}">Preencha com seu celular</label>
+          </div>
+
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-outline-primary btn-lg float-right mt-3" [disabled]="!formulario.valid" routerLink="/dados" (click)="salvarDados()">continuar</button>
+          <button type="submit" class="btn btn-outline-primary btn-lg float-left mt-3" routerLink="" (click)="limparDados()">cancelar</button>
+        </div>
+      
+      </div>
+
+    </div>
+  </form>
+
+</main>
