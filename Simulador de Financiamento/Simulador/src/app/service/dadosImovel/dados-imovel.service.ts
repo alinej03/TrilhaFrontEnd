@@ -5,7 +5,7 @@ import { imovel } from 'src/app/componentes/model/dados.model';
   providedIn: 'root'
 })
 export class DadosImovelService {
-  private imovel: imovel = {
+  imovel: imovel = {
     id: 0,
     seletor: '',
     rendaMensal: null,
@@ -22,11 +22,6 @@ export class DadosImovelService {
 
   setImovel(novoImovel: imovel) {
     this.imovel = novoImovel;
-  }
-
-  validacao() {
-    return this.imovel.id !== 0 && this.imovel.seletor !== '' && this.imovel.rendaMensal !== 0 && this.imovel.valorImovel !== 0
-      && this.imovel.valorEntrada !== 0 && this.imovel.parcelas !== 0
   }
 
   limparDados() {

@@ -29,7 +29,7 @@
         </div>
 
         <div class="form-group col-md-4">
-          <input class="form-control"  (keyup)="calculoEntrada($event.target)" [ngClass]="{'is-invalid': entrada == false || (formularioImovel.controls['valorEntrada'].invalid && formularioImovel.controls['valorEntrada'].touched)}" type="text" placeholder="Valor da entrada"  formControlName="valorEntrada">
+          <input class="form-control"  (keyup)="calculoEntrada()" [ngClass]="{'is-invalid': entrada == false || (formularioImovel.controls['valorEntrada'].invalid && formularioImovel.controls['valorEntrada'].touched)}" type="text" placeholder="Valor da entrada"  formControlName="valorEntrada">
           <label class="description"  [ngClass]="{'error-description': formularioImovel.controls['valorEntrada'].invalid && formularioImovel.controls['valorEntrada'].touched}">Preencha com o minimo 20% do valor do imovél </label>
         </div>
 

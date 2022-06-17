@@ -6,7 +6,7 @@ import { InfModel } from 'src/app/componentes/model/informacoes.model';
 })
 export class DadosProponenteService {
 
-  private proponente: InfModel = {
+  proponente: InfModel = {
     id: 0,
     nomeCompleto: '',
     profissao: '',
@@ -25,11 +25,6 @@ export class DadosProponenteService {
 
   setProponente(novoProponente: InfModel) {
     this.proponente = novoProponente;
-  }
-
-  validacao() {
-    return this.proponente.id !== 0 && this.proponente.nomeCompleto !== '' && this.proponente.profissao !== '' && this.proponente.cpf !== '' && this.proponente.email !== ''
-      && this.proponente.dataNascimento !== '' && this.proponente.cep !== '' && this.proponente.celular !== ''
   }
 
   limparDados() {

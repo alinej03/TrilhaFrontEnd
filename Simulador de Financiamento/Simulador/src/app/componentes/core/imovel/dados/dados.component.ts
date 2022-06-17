@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { DadosImovelService } from 'src/app/service/dadosImovel/dados-imovel.service';
 import { ValoresAprovadosService } from 'src/app/service/valoresAprovado/valores-aprovados.service';
 
-
 @Component({
   selector: 'app-dados',
   templateUrl: './dados.component.html',
@@ -36,17 +35,16 @@ export class DadosComponent implements OnInit {
     this.formularioImovel.controls['parcelas'].setValue(dados.parcelas);
   }
 
-  calculoEntrada(valor: any){
+  calculoEntrada(){
     var valorImovel = this.formularioImovel.value.valorImovel
     var valoEntrada = this.formularioImovel.value.valorEntrada
     var resultado = valorImovel*20/100
-   
     
-      if(valoEntrada >= resultado){
-        this.entrada = true;
-      } else{
+    if(valoEntrada >= resultado){
+      this.entrada = true;
+    } else{
         this.entrada = false; 
-      }
+    }
   }
 
   salvarDados() {

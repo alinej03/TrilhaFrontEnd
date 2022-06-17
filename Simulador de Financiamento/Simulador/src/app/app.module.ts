@@ -13,6 +13,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { ReprovadoComponent } from './componentes/pages/reprovado/reprovado.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +23,13 @@ import { ReprovadoComponent } from './componentes/pages/reprovado/reprovado.comp
     AprovadoComponent,
     ReprovadoComponent,
     InicioComponent,  
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

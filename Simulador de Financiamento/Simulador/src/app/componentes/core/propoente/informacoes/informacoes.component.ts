@@ -49,6 +49,7 @@ export class InformacoesComponent implements OnInit {
   }
 
   validacaoData(valor: any): any {
+
     if(valor.value.length == 10) {
       let data = valor.value.split('/');
     
@@ -57,7 +58,7 @@ export class InformacoesComponent implements OnInit {
 
       let idade = Math.abs(dataAtual.getFullYear() - dataInserida.getFullYear());;
 
-      if( dataAtual && idade >= 18) {
+      if(dataAtual && idade >= 18) {
         this.maiorIdade = true;
       } else {
         this.maiorIdade = false;
